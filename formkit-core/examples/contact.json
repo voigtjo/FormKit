@@ -1,0 +1,12 @@
+{
+  "name": "Max Mustermann",
+  "email": "max@example.com",
+  "message": "Hallo, ich interessiere mich für Ihr Produkt.",
+  "consent": true,
+  "now": "2025-10-11",
+  "interests": [
+    "WordPress",
+    "Formulare",
+    "Markdown"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "intelephense.environment.phpVersion": "8.1",
+  "intelephense.environment.includePaths": [
+    "${workspaceFolder}/wordpress/wp-includes",
+    "${workspaceFolder}/wordpress/wp-admin"
+  ],
+  "intelephense.files.maxSize": 5000000,
+  "php.validate.enable": false
+}

@@ -1,0 +1,14 @@
+{
+  "name": "formkit/formkit-core",
+  "description": "FormKit Core (Parser, Evaluator, Filters, Renderer Interface) – minimal MVP for MarkdownExtended templates.",
+  "type": "library",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "FormKit\\": "src/"
+    }
+  },
+  "require": {
+    "php": ">=8.1"
+  }
+}

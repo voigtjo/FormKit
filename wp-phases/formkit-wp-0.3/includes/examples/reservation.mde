@@ -1,0 +1,8 @@
+# Reservierung
+
+#field name label="Name" required
+#field email type="email" label="E-Mail" required
+#field date type="date" label="Datum" required
+#field time type="time" label="Uhrzeit" required
+#field persons type="number" label="Personen" required
+#field notes type="textarea" label="Hinweise"

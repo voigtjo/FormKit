@@ -1,0 +1,23 @@
+# Kontaktformular
+
+Bitte fülle das folgende Formular aus. Felder mit * sind Pflicht.
+
+#field name type="text" label="Dein Name" required
+#field email type="email" label="E-Mail" required
+#field message type="textarea" label="Nachricht"
+
+#if consent
+Ich habe die Datenschutzbestimmungen gelesen und stimme zu.
+#endif
+
+## Zusammenfassung
+- Name: {{ name | upper }}
+- E-Mail: {{ email }}
+- Datum: {{ now | date:Y-m-d }}
+
+## Interessen
+#loop interests
+- {{ item }}
+#endloop
+
+{% include "email/footer" %}
