@@ -1,0 +1,28 @@
+# Reisekostenerstattung – Antrag
+
+#row
+  #c6 #field name label="Name" readonly
+  #c6 #field request_date type="date" label="Datum" readonly
+#endrow
+
+## Veranstaltung / Anlass
+#row
+  #c6 #field event label="Veranstaltung/Anlass" readonly
+  #c6 #field location label="Ort" readonly
+#endrow
+
+## Reisedaten
+#row
+  #c6 #field date_from  type="date" label="Datum (von)"           readonly
+  #c6 #field date_to    type="date" label="Datum (bis)"            readonly
+#endrow
+#row
+  #c6 #field time_start type="time" label="Reisebeginn Uhrzeit"    readonly
+  #c6 #field time_end   type="time" label="Reiseende Uhrzeit"      readonly
+#endrow
+
+## Prüfen / Verifizieren
+#row
+  #c12 #qr {value="{{ qr_url }}" size=120}
+#endrow
+

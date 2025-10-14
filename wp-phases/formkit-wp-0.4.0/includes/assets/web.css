@@ -1,0 +1,131 @@
+/* ——— Web 12-Spalten-Layout ——— */
+
+/* Basis-Variablen */
+:root {
+  --fk-gap: 16px;
+  --fk-radius: 8px;
+  --fk-border: #d0d5dd;
+  --fk-label: #111827;
+}
+
+/* Grid-Container (funktioniert mit und ohne .fk-row-layout) */
+.fk-row,
+.fk-row-layout .fk-row {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: var(--fk-gap);
+  margin-bottom: var(--fk-gap);
+}
+
+/* Spalten-Elemente */
+.fk-col,
+.fk-row-layout .fk-col {
+  min-width: 0; /* wichtig für Inputs in schmalen Spalten */
+}
+
+/* Spalten-Spans (12er Grid) */
+.fk-span-1  { grid-column: span 1 / span 1; }
+.fk-span-2  { grid-column: span 2 / span 2; }
+.fk-span-3  { grid-column: span 3 / span 3; }
+.fk-span-4  { grid-column: span 4 / span 4; }
+.fk-span-5  { grid-column: span 5 / span 5; }
+.fk-span-6  { grid-column: span 6 / span 6; }
+.fk-span-7  { grid-column: span 7 / span 7; }
+.fk-span-8  { grid-column: span 8 / span 8; }
+.fk-span-9  { grid-column: span 9 / span 9; }
+.fk-span-10 { grid-column: span 10 / span 10; }
+.fk-span-11 { grid-column: span 11 / span 11; }
+.fk-span-12 { grid-column: span 12 / span 12; }
+
+/* Responsive: unter 900px → 6 Spalten */
+@media (max-width: 900px) {
+  .fk-row,
+  .fk-row-layout .fk-row {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+  .fk-span-7,
+  .fk-span-8,
+  .fk-span-9,
+  .fk-span-10,
+  .fk-span-11,
+  .fk-span-12 { grid-column: span 6 / span 6; }
+}
+
+/* Responsive: unter 640px → 1 Spalte */
+@media (max-width: 640px) {
+  .fk-row,
+  .fk-row-layout .fk-row {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  [class*="fk-span-"] { grid-column: span 1 / span 1; }
+}
+
+/* Abstand zwischen Rows innerhalb einer Section */
+.fk-row + .fk-row,
+.fk-row-layout .fk-row + .fk-row { margin-top: 8px; }
+
+/* ——— Überschriften/Abschnitte ——— */
+.fk-section-title { margin: 16px 0 8px; font-size: 1.15rem; font-weight: 700; }
+
+/* Fieldset */
+.fk-fieldset { border: 1px solid var(--fk-border); border-radius: var(--fk-radius); padding: 12px; }
+.fk-fieldset > legend { font-weight: 700; padding: 0 6px; }
+
+/* ——— Form Controls (einheitlich im Web) ——— */
+.fk-control { width: 100%; }
+.fk-control label {
+  display: block;
+  color: var(--fk-label);
+  font-weight: 600;
+  margin: .5rem 0 .35rem;
+}
+
+.fk-control input,
+.fk-control select,
+.fk-control textarea {
+  width: 100%;
+  padding: .65rem .75rem;
+  border: 1px solid var(--fk-border);
+  border-radius: var(--fk-radius);
+  background: #fff;
+  box-sizing: border-box;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.fk-control textarea { min-height: 120px; }
+
+/* Zahlen/Datum typografisch sauber */
+.fk-control input[type="date"],
+.fk-control input[type="time"],
+.fk-control input[type="number"] {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Fokus- und Hover-Zustände */
+.fk-control input:focus,
+.fk-control select:focus,
+.fk-control textarea:focus {
+  outline: none;
+  border-color: #94a3b8;
+  box-shadow: 0 0 0 3px rgba(148, 163, 184, .25);
+}
+
+.fk-control input:hover,
+.fk-control select:hover,
+.fk-control textarea:hover {
+  border-color: #c4c9d2;
+}
+
+/* ——— Utility: Linie für Unterschrift / Freitext ——— */
+.fk-line {
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid #9ca3af;
+  height: 22px;
+  line-height: 22px;
+  margin: 6px 0 2px;
+}
+
+/* ——— Utility: QR-Bild ——— */
+.fk-qr { display: inline-block; }

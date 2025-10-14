@@ -1,0 +1,39 @@
+@page { margin: 20mm; }
+body { font-family: DejaVu Sans, sans-serif; font-size: 12px; }
+h1,h2,h3 { margin: 0 0 8px; }
+
+table.grid { width:100%; border-collapse: collapse; }
+table.grid td { vertical-align: top; padding: 6pt; }
+
+table.grid.g12 { table-layout: fixed; }
+table.grid.g12 td[colspan="1"]  { width: 8.333%; }
+table.grid.g12 td[colspan="2"]  { width: 16.666%; }
+table.grid.g12 td[colspan="3"]  { width: 25%; }
+table.grid.g12 td[colspan="4"]  { width: 33.333%; }
+table.grid.g12 td[colspan="5"]  { width: 41.666%; }
+table.grid.g12 td[colspan="6"]  { width: 50%; }
+table.grid.g12 td[colspan="7"]  { width: 58.333%; }
+table.grid.g12 td[colspan="8"]  { width: 66.666%; }
+table.grid.g12 td[colspan="9"]  { width: 75%; }
+table.grid.g12 td[colspan="10"] { width: 83.333%; }
+table.grid.g12 td[colspan="11"] { width: 91.666%; }
+table.grid.g12 td[colspan="12"] { width: 100%; }
+
+label { display:block; font-weight:600; margin:0 0 3pt; }
+.input, input, textarea, select {
+  display:block; width:100%; min-height:16pt; padding:6pt;
+  border:1px solid #888; box-sizing:border-box;
+}
+
+/* große PDF-Eingabeboxen (wenn du in processFields PDF-Boxen ohne <input> ausgibst) */
+.fk-inputbox { border:1px solid #888; height:22pt; line-height:22pt; padding:0 6pt; }
+.fk-textbox  { border:1px solid #888; min-height:64pt; padding:6pt; }
+
+/* Utility-Linie */
+.fk-line {
+  display:block; width:100%;
+  border-bottom: 1pt solid #888;
+  height: 20pt; line-height: 20pt;
+}
+
+.qr img { display:block; }
