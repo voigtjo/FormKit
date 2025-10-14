@@ -1,5 +1,0 @@
-# Kontakt
-
-#field name label="Name" required
-#field email type="email" label="E-Mail" required
-#field message type="textarea" label="Nachricht" required

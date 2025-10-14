@@ -1,0 +1,21 @@
+---
+page: A4
+margin: 20mm
+header: Herbst-Speisekarte
+---
+
+#grid {cols=2}
+#col
+## Vorspeisen
+- Kürbissuppe – {{ 6.90 | number:2 }} €
+- Feldsalat mit Speck – {{ 8.50 | number:2 }} €
+#endcol
+
+#col
+## Hauptgerichte
+- Wildragout mit Spätzle – {{ 18.90 | number:2 }} €
+- Gebratener Zander – {{ 21.50 | number:2 }} €
+#endcol
+#endgrid
+
+![Platzhalter](/wp-content/uploads/2025/10/menu-placeholder.png)

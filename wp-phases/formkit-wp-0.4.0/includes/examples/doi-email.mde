@@ -1,0 +1,10 @@
+# Bitte bestätige deine E-Mail
+
+Hallo {{ data.name }},
+
+bitte bestätige deine E-Mail-Adresse, indem du den folgenden Link aufrufst:
+
+[Jetzt bestätigen]({{ confirm_url }})
+
+Vielen Dank!
+{% include "email/footer" %}

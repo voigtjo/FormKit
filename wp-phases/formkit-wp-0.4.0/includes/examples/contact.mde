@@ -1,0 +1,5 @@
+# Kontaktformular
+
+#field name label="Dein Name" required
+#field email type="email" label="E-Mail" required
+#field message type="textarea" label="Nachricht" required

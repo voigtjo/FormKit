@@ -1,0 +1,8 @@
+# Neue Kontaktanfrage
+
+**Name:** {{ data.name }}
+**E-Mail:** {{ data.email }}
+
+**Nachricht:**
+{{ data.message }}
+{% include "email/footer" %}

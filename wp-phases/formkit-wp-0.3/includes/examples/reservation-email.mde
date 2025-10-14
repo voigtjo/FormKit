@@ -1,7 +1,0 @@
-# Neue Reservierung
-
-- **Name:** {{ data.name }}
-- **E-Mail:** {{ data.email }}
-- **Datum:** {{ data.date }} {{ data.time }}
-- **Personen:** {{ data.persons }}
-- **Hinweise:** {{ data.notes }}

@@ -1,0 +1,11 @@
+# Neue Reservierungsanfrage
+
+**Name:** {{ data.name }}
+**E-Mail:** {{ data.email }}
+**Datum:** {{ data.date }}
+**Uhrzeit:** {{ data.time }}
+**Personen:** {{ data.persons }}
+
+**Hinweise:**
+{{ data.notes }}
+{% include "email/footer" %}
